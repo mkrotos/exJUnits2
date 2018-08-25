@@ -118,5 +118,12 @@ class ClockTest {
         assertEquals(7, clock.getTime().getHour());
         assertEquals(5, clock.getTime().getMinute());
     }
+    @Test
+    public void setClock(){
+        clock=new Clock(10,10);
+        clock.setTime(22,24);
+        assertEquals(22,clock.getTime().getHour());
+        assertEquals(24,clock.getTime().getMinute());
+    }
 
 }
