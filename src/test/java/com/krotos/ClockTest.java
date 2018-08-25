@@ -87,10 +87,21 @@ class ClockTest {
         assertEquals(20,clock.getTime().getHour());
         assertEquals(21,clock.getTime().getMinute());
     }
-
-
-
-
-
+    @Test
+    public void addBigClock(){
+        clock=new Clock(10,10);
+        Clock newClock=new Clock(10,55);
+        clock.addClock(newClock);
+        assertEquals(21,clock.getTime().getHour());
+        assertEquals(5,clock.getTime().getMinute());
+    }
+    @Test
+    public void addBiggestClock(){
+        clock=new Clock(10,10);
+        Clock newClock=new Clock(20,55);
+        clock.addClock(newClock);
+        assertEquals(7,clock.getTime().getHour());
+        assertEquals(5,clock.getTime().getMinute());
+    }
 
 }
