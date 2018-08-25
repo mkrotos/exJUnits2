@@ -12,7 +12,7 @@ public class Main {
         productScore.setScore((short) 5);
         System.out.println("Liczba gwiazdek po ustawieniu: " + productScore.getScore());
 
-        Clock clock=new Clock();
+        Clock clock = new Clock();
         System.out.println(clock.getTime());
     }
 
